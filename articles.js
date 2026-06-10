@@ -1,6 +1,14 @@
 // articles.js — article data store
 // Seed articles ship with the site. Published articles are saved to localStorage.
 
+const AFFILIATE_LINKS = {
+  'Sider': 'https://sider.ai/?linkId=lp_131376&sourceId=aitoolsinsider&tenantId=sider',
+  'MarketXLS': 'https://marketxls.pxf.io/1Gy19z',
+  'Eyeson': 'https://eyeson.sjv.io/oN5z4W',
+  'BdThemes': 'https://elementpackpro.sjv.io/WOA4ye',
+  'MetaBox': 'https://metabox.sjv.io/zzPyxG',
+};
+
 const SEED_ARTICLES = [
   {
     id: 1,
@@ -18,10 +26,12 @@ const SEED_ARTICLES = [
 <p>Not strictly a writing generator, but Grammarly's AI rewrite suggestions have become essential for polishing AI-generated content before publishing. <a href="[AFFILIATE_LINK_Grammarly]" class="affiliate-link">Try Grammarly Premium →</a></p>
 <h3>4. Surfer SEO</h3>
 <p>Write and optimise in the same editor. Surfer scores your content in real-time against top-ranking pages. Pair it with Jasper for a complete workflow. <a href="[AFFILIATE_LINK_Surfer]" class="affiliate-link">Try Surfer SEO →</a></p>
-<h3>5–7: Honourable mentions</h3>
-<p>Writesonic, Rytr, and Notion AI round out the list. All have strong free tiers and are worth exploring if budget is a constraint.</p>
+<h3>5. Sider AI</h3>
+<p>Sider is a brilliant AI sidebar that works across your entire browser — great for research, summarising articles and writing assistance without switching tabs. <a href="https://sider.ai/?linkId=lp_131376&sourceId=aitoolsinsider&tenantId=sider" class="affiliate-link">Try Sider AI free →</a></p>
+<h3>6–7: Honourable mentions</h3>
+<p>Writesonic and Rytr round out the list. Both have strong free tiers and are worth exploring if budget is a constraint.</p>
 <h3>Our verdict</h3>
-<p>For most bloggers: start with Jasper for content generation and Grammarly for editing. Add Surfer SEO once you're ready to scale traffic.</p>`
+<p>For most bloggers: start with Grammarly for editing and Sider for browser-based AI assistance. Add Surfer SEO once you're ready to scale traffic. For spreadsheet users, <a href="https://marketxls.pxf.io/1Gy19z" class="affiliate-link">MarketXLS</a> is a must-have. WordPress bloggers should also check out <a href="https://elementpackpro.sjv.io/WOA4ye" class="affiliate-link">BdThemes</a> and <a href="https://metabox.sjv.io/zzPyxG" class="affiliate-link">MetaBox</a> for powerful site customisation.</p>`
   },
   {
     id: 2,
