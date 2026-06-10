@@ -7,6 +7,7 @@ const AFFILIATE_LINKS = {
   'Eyeson': 'https://eyeson.sjv.io/oN5z4W',
   'BdThemes': 'https://elementpackpro.sjv.io/WOA4ye',
   'MetaBox': 'https://metabox.sjv.io/zzPyxG',
+  'HappyScribe': 'https://happyscribe.sjv.io/KBOJZA',
 };
 
 const SEED_ARTICLES = [
