@@ -1,15 +1,33 @@
 // render.js — shared rendering helpers
 
+const ARTICLE_IMAGES = [
+  'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80',
+  'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&q=80',
+  'https://images.unsplash.com/photo-1655720828083-f9bdbd70a6e3?w=600&q=80',
+  'https://images.unsplash.com/photo-1684369175833-4b445ad6bfb5?w=600&q=80',
+  'https://images.unsplash.com/photo-1676277791608-ac54525aa94d?w=600&q=80',
+  'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=600&q=80',
+  'https://images.unsplash.com/photo-1680016861993-18e4b9cf1ace?w=600&q=80',
+  'https://images.unsplash.com/photo-1686191128892-3b37add4c844?w=600&q=80',
+];
+
+function getImage(id) {
+  return ARTICLE_IMAGES[id % ARTICLE_IMAGES.length];
+}
+
 function renderArticleGrid(containerId) {
   const articles = getArticles();
   const el = document.getElementById(containerId);
   if (!el) return;
-  el.innerHTML = articles.map(a => `
+  el.innerHTML = articles.map((a, i) => `
     <a href="article.html?id=${a.id}" class="article-card">
-      <span class="tag">${a.tag}</span>
-      <h3>${a.title}</h3>
-      <p>${a.excerpt}</p>
-      <span class="read-more">${a.mins} min read →</span>
+      <div class="card-img" style="background-image: url('${a.image || getImage(i)}')"></div>
+      <div class="card-body">
+        <span class="tag">${a.tag}</span>
+        <h3>${a.title}</h3>
+        <p>${a.excerpt}</p>
+        <span class="read-more">${a.mins} min read →</span>
+      </div>
     </a>
   `).join('');
 }
@@ -25,7 +43,9 @@ function renderArticlePage(containerId, id) {
   }
   document.title = article.title + ' — AIToolsInsider';
   document.getElementById('page-desc').content = article.excerpt;
-  el.innerHTML = article.body;
+  const idx = articles.indexOf(article);
+  const img = article.image || getImage(idx);
+  el.innerHTML = `<div class="article-hero-img" style="background-image:url('${img}')"></div>` + article.body;
 }
 
 function renderAdminList(containerId) {
