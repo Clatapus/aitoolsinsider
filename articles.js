@@ -8,6 +8,7 @@ const AFFILIATE_LINKS = {
   'BdThemes': 'https://elementpackpro.sjv.io/WOA4ye',
   'MetaBox': 'https://metabox.sjv.io/zzPyxG',
   'HappyScribe': 'https://happyscribe.sjv.io/KBOJZA',
+  'MuleRun': 'https://mulerun.pxf.io/xJryqO',
 };
 
 const SEED_ARTICLES = [
