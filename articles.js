@@ -9,6 +9,7 @@ const AFFILIATE_LINKS = {
   'MetaBox': 'https://metabox.sjv.io/zzPyxG',
   'HappyScribe': 'https://happyscribe.sjv.io/KBOJZA',
   'MuleRun': 'https://mulerun.pxf.io/xJryqO',
+  'AppSumo': 'https://appsumo.8odi.net/VOAZW6',
 };
 
 const SEED_ARTICLES = [
