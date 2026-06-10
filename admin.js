@@ -50,7 +50,8 @@ MINS: [estimated read time as a number, e.g. 7]
 [full article HTML body here using <p>, <h3>, <a> tags only]`;
 
   try {
-    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+    const PROXY = 'https://twilight-dawn-fc2e.claudiasmith98.workers.dev';
+    const resp = await fetch(PROXY, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
