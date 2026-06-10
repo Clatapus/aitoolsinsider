@@ -6,6 +6,10 @@
   <title>Admin — AIToolsInsider</title>
   <link rel="stylesheet" href="style.css" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4645411436852344" crossorigin="anonymous"></script>
+<style>
+.affiliate-check { display:flex; align-items:center; gap:6px; font-size:13px; cursor:pointer; padding:4px 0; }
+.affiliate-check input { cursor:pointer; accent-color:#534AB7; width:15px; height:15px; flex-shrink:0; }
+</style>
 </head>
 <body>
 
@@ -43,9 +47,32 @@
       </div>
 
       <div class="form-row">
-        <label for="affiliates">Affiliate tools to feature</label>
-        <input type="text" id="affiliates" placeholder="e.g. Jasper, Notion, Grammarly" value="Jasper, Copy.ai, Grammarly" />
-        <small>Comma-separated. These will have affiliate link placeholders inserted automatically.</small>
+        <label>Affiliate tools to feature</label>
+        <div id="affiliate-checkboxes" style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; padding:12px; border:1px solid #ddd; border-radius:8px; background:#fff;">
+          <label class="affiliate-check"><input type="checkbox" value="Sider AI" checked> Sider AI</label>
+          <label class="affiliate-check"><input type="checkbox" value="MarketXLS" checked> MarketXLS</label>
+          <label class="affiliate-check"><input type="checkbox" value="Eyeson" checked> Eyeson</label>
+          <label class="affiliate-check"><input type="checkbox" value="BdThemes" checked> BdThemes</label>
+          <label class="affiliate-check"><input type="checkbox" value="MetaBox" checked> MetaBox</label>
+          <label class="affiliate-check"><input type="checkbox" value="HappyScribe" checked> HappyScribe</label>
+          <label class="affiliate-check"><input type="checkbox" value="MuleRun" checked> MuleRun</label>
+          <label class="affiliate-check"><input type="checkbox" value="Grammarly"> Grammarly (pending)</label>
+          <label class="affiliate-check"><input type="checkbox" value="Surfer SEO"> Surfer SEO (pending)</label>
+          <label class="affiliate-check"><input type="checkbox" value="AppSumo"> AppSumo (pending)</label>
+          <label class="affiliate-check"><input type="checkbox" value="Notta AI"> Notta AI (pending)</label>
+          <label class="affiliate-check"><input type="checkbox" value="Artisse AI"> Artisse AI (pending)</label>
+          <label class="affiliate-check"><input type="checkbox" value="AiPPT"> AiPPT (pending)</label>
+          <label class="affiliate-check"><input type="checkbox" value="PopAi"> PopAi (pending)</label>
+          <label class="affiliate-check"><input type="checkbox" value="Tidio"> Tidio (pending)</label>
+          <label class="affiliate-check"><input type="checkbox" value="Bubble"> Bubble (pending)</label>
+          <label class="affiliate-check"><input type="checkbox" value="Filmora"> Filmora (pending)</label>
+          <label class="affiliate-check"><input type="checkbox" value="Gitmind"> Gitmind (pending)</label>
+          <label class="affiliate-check"><input type="checkbox" value="CopyOwl"> CopyOwl (pending)</label>
+          <label class="affiliate-check"><input type="checkbox" value="BypassPen AI"> BypassPen AI (pending)</label>
+          <label class="affiliate-check"><input type="checkbox" value="Skywork AI"> Skywork AI (pending)</label>
+        </div>
+        <small style="margin-top:6px; display:block;">Tick the tools you want featured. Live links are pre-ticked.</small>
+        <input type="hidden" id="affiliates" />
       </div>
 
       <div class="form-row">
@@ -54,7 +81,7 @@
         <small>Get yours at <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a>. Never stored — only used in this session.</small>
       </div>
 
-      <button class="btn-primary" id="gen-btn" onclick="generateArticle()">Generate article</button>
+      <button class="btn-primary" id="gen-btn" onclick="syncAffiliates(); generateArticle()">Generate article</button>
       <div id="gen-status" class="status-bar" style="display:none;"></div>
     </section>
 

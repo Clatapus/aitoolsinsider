@@ -1,3 +1,9 @@
+function syncAffiliates() {
+  const checked = [...document.querySelectorAll('#affiliate-checkboxes input:checked')]
+    .map(cb => cb.value);
+  document.getElementById('affiliates').value = checked.join(', ');
+}
+
 // admin.js — article generation via Anthropic API
 
 let generatedArticle = null;
