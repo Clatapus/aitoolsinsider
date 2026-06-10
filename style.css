@@ -1,0 +1,340 @@
+/* style.css — AIToolsInsider */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #1a1a1a;
+  background: #f9f9f7;
+}
+
+a { color: #534AB7; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #e8e8e4;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.logo span { color: #534AB7; }
+
+nav { display: flex; gap: 1.5rem; font-size: 14px; color: #555; }
+nav a { color: #555; }
+nav a:hover { color: #1a1a1a; text-decoration: none; }
+nav a.active { color: #534AB7; font-weight: 500; }
+
+/* Ad slots */
+.ad-banner { margin: 1.5rem auto; }
+.ad-placeholder {
+  background: #f0f0ec;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+}
+.ad-sidebar { margin-bottom: 1.5rem; }
+.ad-footer-banner { margin-top: 2rem; }
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #EEEDFE 0%, #E6F1FB 100%);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+}
+
+.hero h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #3C3489;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 16px;
+  color: #534AB7;
+}
+
+/* Articles grid */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding-bottom: 3rem;
+}
+
+.article-card {
+  background: #fff;
+  border: 1px solid #e8e8e4;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: block;
+  color: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.article-card:hover {
+  border-color: #AFA9EC;
+  box-shadow: 0 2px 12px rgba(83,74,183,0.08);
+  text-decoration: none;
+}
+
+.article-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  color: #1a1a1a;
+}
+
+.article-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  font-size: 13px;
+  color: #534AB7;
+  font-weight: 500;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: #EEEDFE;
+  color: #534AB7;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Article page */
+.article-page {
+  max-width: 720px;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+.back-link:hover { color: #1a1a1a; }
+
+#article-body h2 {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 1.25rem;
+}
+
+#article-body h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 1.75rem 0 0.6rem;
+}
+
+#article-body p {
+  margin-bottom: 1rem;
+  color: #2a2a2a;
+}
+
+.affiliate-link {
+  color: #534AB7;
+  font-weight: 500;
+  border-bottom: 1px solid #AFA9EC;
+}
+
+.affiliate-link:hover { border-bottom-color: #534AB7; text-decoration: none; }
+
+/* Admin page */
+.admin-page { padding-top: 2rem; padding-bottom: 3rem; max-width: 760px; }
+
+.admin-page h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.admin-sub {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.admin-card {
+  background: #fff;
+  border: 1px solid #e8e8e4;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-card h2 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.form-row { margin-bottom: 1rem; }
+
+.form-row label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 4px;
+}
+
+.form-row small {
+  display: block;
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  width: 100%;
+  padding: 9px 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  color: #1a1a1a;
+  font-family: inherit;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: #534AB7;
+  box-shadow: 0 0 0 3px rgba(83,74,183,0.1);
+}
+
+.btn-primary {
+  background: #534AB7;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-primary:hover { background: #3C3489; }
+.btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.btn-outline {
+  background: transparent;
+  color: #1a1a1a;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-outline:hover { background: #f5f5f2; }
+
+.action-row { display: flex; gap: 0.75rem; margin-top: 1rem; }
+
+.status-bar {
+  margin-top: 1rem;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.status-info { background: #E6F1FB; color: #185FA5; }
+.status-success { background: #EAF3DE; color: #3B6D11; }
+.status-error { background: #FCEBEB; color: #A32D2D; }
+
+.article-preview {
+  font-size: 15px;
+  line-height: 1.75;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 1rem;
+  background: #f9f9f7;
+  border-radius: 8px;
+  border: 1px solid #e8e8e4;
+}
+
+.article-preview h2, .article-preview h3 { font-weight: 600; margin: 1rem 0 0.5rem; }
+.article-preview p { margin-bottom: 0.75rem; }
+
+.affiliate-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.affiliate-table th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #888;
+  padding: 0 0 8px;
+  border-bottom: 1px solid #e8e8e4;
+}
+
+.affiliate-table td {
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0ec;
+  color: #2a2a2a;
+}
+
+.affiliate-table tr:last-child td { border-bottom: none; }
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid #e8e8e4;
+  background: #fff;
+  padding: 1.5rem 0;
+  font-size: 13px;
+  color: #888;
+  margin-top: 2rem;
+}

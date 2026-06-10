@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Article — AIToolsInsider</title>
+  <meta name="description" id="page-desc" content="" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">AI<span>Tools</span>Insider</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container article-page">
+
+    <!-- ✅ Replace with real AdSense rectangle ad -->
+    <div class="ad-placeholder ad-sidebar">Ad slot — 300×250 rectangle (replace with AdSense code)</div>
+
+    <article id="article-content">
+      <a href="index.html" class="back-link">← Back to articles</a>
+      <div id="article-body"></div>
+    </article>
+
+    <!-- ✅ Replace with real AdSense leaderboard ad -->
+    <div class="ad-placeholder ad-footer-banner">Ad slot — 728×90 leaderboard (replace with AdSense code)</div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 AIToolsInsider. Some links are affiliate links — we may earn a commission at no extra cost to you.</p>
+    </div>
+  </footer>
+
+  <script src="articles.js"></script>
+  <script src="render.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get('id'), 10);
+    renderArticlePage('article-body', id);
+  </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — AIToolsInsider</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">AI<span>Tools</span>Insider</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="admin.html" class="active">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container admin-page">
+
+    <h1>Admin panel</h1>
+    <p class="admin-sub">Generate new SEO articles with Claude, then publish them to your site instantly.</p>
+
+    <section class="admin-card">
+      <h2>Generate new article</h2>
+
+      <div class="form-row">
+        <label for="topic">Topic / keyword</label>
+        <input type="text" id="topic" placeholder="e.g. best AI tools for teachers" value="best AI writing tools for bloggers" />
+      </div>
+
+      <div class="form-row">
+        <label for="article-type">Article type</label>
+        <select id="article-type">
+          <option value="listicle">Listicle (Top 5/7/10 list)</option>
+          <option value="comparison">Comparison (A vs B)</option>
+          <option value="guide">How-to guide</option>
+          <option value="review">Single tool review</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="affiliates">Affiliate tools to feature</label>
+        <input type="text" id="affiliates" placeholder="e.g. Jasper, Notion, Grammarly" value="Jasper, Copy.ai, Grammarly" />
+        <small>Comma-separated. These will have affiliate link placeholders inserted automatically.</small>
+      </div>
+
+      <div class="form-row">
+        <label for="api-key">Anthropic API key</label>
+        <input type="password" id="api-key" placeholder="sk-ant-..." />
+        <small>Get yours at <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a>. Never stored — only used in this session.</small>
+      </div>
+
+      <button class="btn-primary" id="gen-btn" onclick="generateArticle()">Generate article</button>
+      <div id="gen-status" class="status-bar" style="display:none;"></div>
+    </section>
+
+    <section class="admin-card" id="preview-card" style="display:none;">
+      <h2>Preview &amp; publish</h2>
+      <div id="preview-output" class="article-preview"></div>
+      <div class="action-row">
+        <button class="btn-primary" onclick="publishArticle()">Publish to site</button>
+        <button class="btn-outline" onclick="document.getElementById('preview-card').style.display='none';">Discard</button>
+      </div>
+    </section>
+
+    <section class="admin-card">
+      <h2>Affiliate programs</h2>
+      <p style="font-size:14px; color:#666; margin-bottom:1rem;">Sign up to these programs (all free) and replace the <code>[AFFILIATE_LINK_ToolName]</code> placeholders in generated articles with your real links.</p>
+      <table class="affiliate-table">
+        <thead><tr><th>Tool</th><th>Commission</th><th>Sign up</th></tr></thead>
+        <tbody>
+          <tr><td>Jasper AI</td><td>30% recurring</td><td><a href="https://www.jasper.ai/affiliates" target="_blank">jasper.ai/affiliates</a></td></tr>
+          <tr><td>Notion</td><td>50% first sale</td><td><a href="https://www.notion.so/affiliates" target="_blank">notion.so/affiliates</a></td></tr>
+          <tr><td>Grammarly</td><td>$0.20–$20/signup</td><td><a href="https://www.grammarly.com/affiliates" target="_blank">grammarly.com/affiliates</a></td></tr>
+          <tr><td>Copy.ai</td><td>45% recurring</td><td><a href="https://www.copy.ai/affiliate-program" target="_blank">copy.ai/affiliate</a></td></tr>
+          <tr><td>Surfer SEO</td><td>25% recurring</td><td><a href="https://surferseo.com/affiliate/" target="_blank">surferseo.com/affiliate</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="admin-card">
+      <h2>Published articles</h2>
+      <div id="admin-article-list"></div>
+    </section>
+
+  </main>
+
+  <script src="articles.js"></script>
+  <script src="render.js"></script>
+  <script src="admin.js"></script>
+  <script>renderAdminList('admin-article-list');</script>
+</body>
+</html>
